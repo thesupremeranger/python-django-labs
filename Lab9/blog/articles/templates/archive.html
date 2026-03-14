@@ -6,39 +6,38 @@
 </head>
 <body class="archive">
 <div class="header">
-    <img class="logo" src="{{ STATIC_URL }}img/dpb-logo.jpg" alt=""/>
+    <img class="logo" src="{{ STATIC_URL }}img/dpb-logo.png" alt=""/>
     <div class="header-text-area">
         <p class="service-title">Коллективный блог</p>
         <a href="/register/" class="register-link">Регистрация</a>
         <a href="/login/" class="register-link">Вход</a>
     </div>
     <div class="icons-for-parallax">
-        <img class="icon-for-parallax-first" src="{{ STATIC_URL }}img/dpb-logo.jpg">
-        <img class="icon-for-parallax-second" src="{{ STATIC_URL }}img/dpb-logo.jpg">
-        <img class="icon-for-parallax-third" src="{{ STATIC_URL }}img/dpb-logo.jpg">
+        <img class="icon-for-parallax-first" src="{{ STATIC_URL }}img/icon.png">
+        <img class="icon-for-parallax-second" src="{{ STATIC_URL }}img/icon.png">
+        <img class="icon-for-parallax-third" src="{{ STATIC_URL }}img/icon.png">
     </div>
 </div>
-    <div class="archive-content">
-        {% for post in posts %}
-       <div class="one-post">
-    <div class="post-managment">
-        <h2 class="post-title"><a href="/article/{{ post.id }}/">{{ post.title }}</a></h2>
-        <p class="fold-button">Свернуть</p>
+<div class="archive-content">
+    {% for post in posts %}
+    <div class="one-post">
+        <div class="post-managment">
+            <h2 class="post-title"><a href="/article/{{ post.id }}/">{{ post.title }}</a></h2>
+            <p class="fold-button">Свернуть</p>
+        </div>
+        <div class="article-info">
+            <div class="article-author">{{ post.author.username }}</div>
+            <div class="article-created-date">{{ post.created_date }}</div>
+        </div>
+        <p class="article-text">{{ post.get_excerpt }}</p>
+        <div class="one-post-shadow"></div>
     </div>
-    <div class="article-info">
-        <div class="article-author">{{ post.author.username }}</div>
-        <div class="article-created-date">{{ post.created_date }}</div>
-    </div>
-    <p class="article-text">{{ post.get_excerpt }}</p>
-    <div class="one-post-shadow"></div>
+    {% endfor %}
 </div>
-        {% endfor %}
-    </div>
-       <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.js"></script>
     <script src="{{ STATIC_URL }}js/helloworld.js"></script>
     <script src="{{ STATIC_URL }}js/fold-post.js"></script>
     <script src="{{ STATIC_URL }}js/highlight-post.js"></script>
     <script src="{{ STATIC_URL }}js/parallax.js"></script>
-</body>
 </body>
 </html>

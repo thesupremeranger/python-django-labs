@@ -4,11 +4,32 @@ body {
     color: #ffffff;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
 .header img {
-    display: block;
-    width: 318px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.header-text-area {
+    padding: 20px;
+}
+
+.service-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.register-link {
+    color: #ffffff;
+    margin-right: 20px;
+    text-decoration: none;
 }
 
 .archive {

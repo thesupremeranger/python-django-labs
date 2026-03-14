@@ -6,8 +6,8 @@ $(document).ready(function(){
     });
 
     $('.header .logo').hover(function(){
-        $(this).stop().animate({width: '120px'}, 300);
+        $(this).stop().animate({width: '120px', height: '120px'}, 300);
     }, function(){
-        $(this).stop().animate({width: '100px'}, 300);
+        $(this).stop().animate({width: '100px', height: '100px'}, 300);
     });
 });

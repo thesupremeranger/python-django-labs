@@ -6,8 +6,8 @@ $(document).ready(function(){
     });
 
     $('.header img').hover(function(){
-        $(this).animate({width: '338px'}, 300);
+        $(this).stop().animate({width: '338px'}, 300);
     }, function(){
-        $(this).animate({width: '318px'}, 300);
+        $(this).stop().animate({width: '318px'}, 300);
     });
 });
